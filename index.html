@@ -222,60 +222,88 @@
 			box-shadow: -150px -220px 5px #78CB05, 25px 125px 15px #78CB05, -25px -125px 10px #78CB05, 0px -200px 20px #78CB05;
 		}
 
-		.n5{
-			height: calc(450px + 100px * 2);
-			background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(255,255,0,1) 50%, rgba(255,0,0,1) 100%);
-			position: relative;
-		}
-		.obolochka{
-			height: 450px;
-			width: 450px;
-			position: absolute;
-			top:100px;
-			left: calc(50% - 450px / 2);
-			border: 2px black solid;
-			overflow:hidden;
-		}
-		.k1{
-			height: 300px;
-			width: 300px;
-			position: absolute;
-			top: 100px;
-			left:calc(50% - 450px / 2);
-			border: 2px black solid;
-			border-radius: 50%;
-			overflow: hidien;			}	
-		.k2{
-			height: 300px;
-			width: 300px;
-			position: absolute;
-			bottom:150px;
-			right:150px;
-			border: 2px black solid;
-			border-radius: 50%;
-		}
-		.s1{
-			height: 300px;
-			width: 300px;
-			position: absolute;
-			top:-150px;
-			left:-150px;
-			background: red;
-			border-radius: 50%;
-		}	
-		.s2{
-			height: 300px;
-			width: 300px;
-			position: absolute;
-			bottom:-150px;
-			right:-150px;
-			background :red;
-			border: 2px black solid;
-			border-radius: 50%;
-		}
+	.n5 {
+		position: relative;
+		height: calc(450px + 100px * 2);
+		background: linear-gradient(45deg, #f00 0%, #ff0 50%, #f00 100%);
+	}
+	.obolochka {
+		position: absolute;
+		top: 100px; left: calc(50% - 450px / 2);
+		height: 450px; width: 450px;
+		overflow: hidden;
+	}
+
+	.k1, .k2, .s1, .s2 {
+		position: absolute;
+		height: 300px; width: 300px;
+		border-radius: 50%;
+	}
+	.k1 {
+		top: 150px; left: 150px;
+	}
+	.k2 {
+		bottom: 150px; right: 150px;
+	}
+	.s1 {
+		top: -150px; left: -150px;
+		background-image: radial-gradient(circle at right bottom, transparent 0 149px, red 150px);
+	}
+	.s2 {
+		bottom: -150px; right: -150px;
+		background-image: radial-gradient(circle at left top, transparent 0 149px, red 150px);
+	}
+	
+	.img4{
+		position: absolute;
+		right: calc(350px/2 - 174px/2 + 10px);
+		top: 25px;
+		left: 100px;
+		content: "";
+		background-image: url(images/4.png);
+		height: 174px;
+		width: 174px;
+	}
+	.makvin_bc{
+		height: 375px;
+		width: 375px;
+		background: red;
+		position: absolute;
+		top: 50px;
+		border-radius: 50%;
+		left: calc(50% - 375px / 2);
+		box-shadow: -7px 0px 5px yellow;
+	}
+	.makvin_about{
+		margin-left: 65px;
+		margin-top: 225px;
+		width: 300px;
+		color: white;
+		font-size: 30px;
+		position: relative;
+	}
+	.plahka{
+		width: 100%;
+		background: #B5E9FE;
+		display: flex;
+		color: white;
+		position: fixed;
+		top:0;
+		left:0;
+		z-index:50;
+	}
+	.final{
+		font-size: 30px;
+		margin: 9px 15px; 
+		text-shadow: 1px 1px 5px grey;
+	}
+	.final2{
+		margin: 0px 3px; 
+	}
 	</style>
 </head>
 <body>
+	<div class="plahka"><img src="images/pixar.jpg" class="final2"> <p class="final"> 5 урок PIXAR</p></div>
 	<section class="n1">
 		<div class="hor_ser_bc">
 			<p class="hor_ser_about">Треба відкинути стереотипи і бути собою</p>
@@ -303,10 +331,17 @@
 		</div>
 	</section>
 	<section class="n5">
-		<div class="k1"></div>
 		<div class="obolochka">
-			<div class="s1"></div>
-			<div class="s2"><div class="k2"></div></div>
+			<div class="s1">
+				<div class="k1"></div>
+			</div>
+			<div class="s2">
+				<div class="k2"></div>
+			</div>
+			<div class="makvin_bc">
+				<div class="img4"></div>
+				<p class="makvin_about">Не збувай тих хто завжди в вас вірив.</p>
+			</div>
 		</div>
 	</section>
 </body>
