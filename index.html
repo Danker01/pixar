@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.n1{
+			height: calc(375px + 100px * 2);
+			background: linear-gradient(135deg, rgba(0,255,255,1) 0%, rgba(0,89,0,1) 100%);
+			position: relative;
+		}
+		.hor_ser_bc{
+			height: 375px;
+			width: 375px;
+			background: linear-gradient(180deg, rgba(0,119,255,1) 50%, rgba(255,255,255,1) 100%);
+			position: absolute;
+			top:100px;
+			left: calc(50% - 375px / 2);
+			border-radius: 50%;
+		}
+		.hor_ser_about{
+			margin-left: calc(375px/2);
+			margin-top: 100px;
+			width: 140px;
+			color: white;
+			font-size: 25px;
+			position: relative;
+		}
+		.hor_ser_about::before{
+			position: absolute;
+			right: 150px;
+			top: -75px;
+			content: "";
+			background-image: url(images/1.png);
+			height: 174px;
+			width: 174px;
+		}
+		.hor_ser_about::after{
+			position: absolute;
+			right: 30px;
+			top: 125px;
+			width: 200px;
+			content: "Хоробра Серцем";
+			text-shadow: 2px 2px 3px black;
+		}
+
+
+		.n2{
+			height: calc(400px + 100px * 2);
+			background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(121,58,190,1) 100%);
+			position: relative;
+		}
+		.vali_bc{
+			height: 375px;
+			width: 375px;
+			background: #BE59FF;
+			position: absolute;
+			top:100px;
+			left: calc(50% - 375px / 2);
+		}
+		.vali_about{
+			margin-left: 25px;
+			margin-top: 200px;
+			width: 350px;
+			color: white;
+			font-size: 30px;
+			position: relative;
+		}
+		.fff{
+			position: absolute;
+			right: calc(350px/2 - 174px/2 + 10px);
+			top: 25px;
+			content: "";
+			background-image: url(images/5.png);
+			height: 174px;
+			width: 174px;
+		}
+		.vali_about:before{
+			content: "";
+			height: 400px;
+			width: 400px;
+			border-radius: 50%;
+			border: 9px #3F6BBF solid;
+			border-left: 0px;
+			border-top: 0px;
+			border-right: 0px;
+			position: absolute;
+			top: -200px;
+			left: -50px;
+			transform: rotate(45deg);
+		}
+		.vali_about:after{
+			content: "";
+			height: 400px;
+			width: 450px;
+			border-radius: 50%;
+			border: 9px #0AA9AC solid;
+			border-left: 0px;
+			border-top: 0px;
+			border-right: 0px;
+			position: absolute;
+			top: -175px;
+			left: -60px;
+		}
+
+		.n3{
+			height: calc(375px + 100px * 2);
+			background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(253,135,17,1) 50%);
+			position: relative;
+			z-index: -2;
+		}
+		.img2{
+			position: absolute;
+			right: calc(350px/2 - 174px/2 + 10px);
+			top: 25px;
+			content: "";
+			background-image: url(images/2.png);
+			height: 174px;
+			width: 174px;
+		}
+		.ktoto_bc{
+			height: 375px;
+			width: 375px;
+			background: #59F3FF;
+			position: absolute;
+			top:100px;
+			left: calc(50% - 375px / 2);
+		}
+		.ktoto_about{
+			margin-left: 25px;
+			margin-top: 200px;
+			width: 350px;
+			color: white;
+			font-size: 30px;
+			position: relative;
+		}
+		.ktoto_about:before{
+			content: "";
+			height: 174px;
+			width: 174px;
+			border-radius: 50%;
+			border: 4px #3F6BBF solid;
+			position: absolute;
+			top:-87px;
+			left: -25px;
+			z-index: -1;
+			box-shadow: -87px -100px blue, -125px 5px yellow, -175px -75px green;
+		}
+		.ktoto_about:after{
+			content: "";
+			height: 174px;
+			width: 174px;
+			border-radius: 50%;
+			border: 4px #3F6BBF solid;
+			position: absolute;
+			top:-87px;
+			left: 165px;
+			z-index: -1;
+			box-shadow: 87px 0 red, 100px 125px purple;
+		}
+
+		.n4{
+			height: calc(375px + 100px * 2);
+			background: linear-gradient(135deg, rgba(97,127,55,1) 0%, rgba(222,240,164,1) 50%, rgba(171,201,112,1) 100%);
+			position: relative;
+			z-index: -2;
+		}
+		.img3{
+			position: absolute;
+			right: calc(350px/2 - 174px/2 + 10px);
+			top: 25px;
+			left: 25px;
+			content: "";
+			background-image: url(images/3.png);
+			height: 174px;
+			width: 174px;
+		}
+		.pes_bc{
+			height: 375px;
+			width: 375px;
+			background: #16A700;
+			position: absolute;
+			top:100px;
+			border-radius: 0 50%;
+			left: calc(50% - 375px / 2);
+			box-shadow: -3px 3px 5px black;
+		}
+		.pes_about{
+			margin-left: 75px;
+			margin-top: 225px;
+			width: 350px;
+			color: white;
+			font-size: 30px;
+			position: relative;
+		}
+		.pes_about:before{
+			content: "";
+			height: 40px;
+			width:  40px;
+			border-radius: 50%;
+			border: 4px #3F6BBF solid;
+			position: absolute;
+			top: -25px;
+			left: -70px;
+			z-index: -1;
+			box-shadow: -87px 0px 10px #7ACA00 , -80px 100px 40px #7ACA00, -175px -75px 30px #7ACA00,  50px 120px 30px #7ACA00;
+		}
+		.pes_about:after{
+			content: "";
+			height: 40px;
+			width:  40px;
+			border-radius: 50%;
+			position: absolute;
+			top: -25px;
+			left: 250px;
+			z-index: 1;
+			box-shadow: -150px -220px 5px #78CB05, 25px 125px 15px #78CB05, -25px -125px 10px #78CB05, 0px -200px 20px #78CB05;
+		}
+
+		.n5{
+			height: calc(450px + 100px * 2);
+			background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(255,255,0,1) 50%, rgba(255,0,0,1) 100%);
+			position: relative;
+		}
+		.obolochka{
+			height: 450px;
+			width: 450px;
+			position: absolute;
+			top:100px;
+			left: calc(50% - 450px / 2);
+			border: 2px black solid;
+			overflow:hidden;
+		}
+		.k1{
+			height: 300px;
+			width: 300px;
+			position: absolute;
+			top: 100px;
+			left:calc(50% - 450px / 2);
+			border: 2px black solid;
+			border-radius: 50%;
+			overflow: hidien;			}	
+		.k2{
+			height: 300px;
+			width: 300px;
+			position: absolute;
+			bottom:150px;
+			right:150px;
+			border: 2px black solid;
+			border-radius: 50%;
+		}
+		.s1{
+			height: 300px;
+			width: 300px;
+			position: absolute;
+			top:-150px;
+			left:-150px;
+			background: red;
+			border-radius: 50%;
+		}	
+		.s2{
+			height: 300px;
+			width: 300px;
+			position: absolute;
+			bottom:-150px;
+			right:-150px;
+			background :red;
+			border: 2px black solid;
+			border-radius: 50%;
+		}
+	</style>
+</head>
+<body>
+	<section class="n1">
+		<div class="hor_ser_bc">
+			<p class="hor_ser_about">Треба відкинути стереотипи і бути собою</p>
+		</div>
+	</section>
+	
+	<section class="n2">
+		<div class="vali_bc">
+			<div class="fff"></div>
+			<p class="vali_about">Ми відповідальні за нашу планету</p>
+		</div>
+	</section>
+
+	<section class="n3">
+		<div class="ktoto_bc">
+			<div class="img2"></div>
+			<p class="ktoto_about">Не треба боятись своїх емоцій</p>
+		</div>
+	</section>
+
+	<section class="n4">
+		<div class="pes_bc">
+			<div class="img3"></div>
+			<p class="pes_about">Щира дружба - ось справжня суперсила.</p>
+		</div>
+	</section>
+	<section class="n5">
+		<div class="k1"></div>
+		<div class="obolochka">
+			<div class="s1"></div>
+			<div class="s2"><div class="k2"></div></div>
+		</div>
+	</section>
+</body>
+</html>
